@@ -1,65 +1,305 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className="bg-[#05031A] text-white">
+
+      {/* HERO */}
+
+      <section className="min-h-screen max-w-7xl mx-auto px-6 flex items-center pt-24">
+
+        <div className="grid md:grid-cols-2 gap-16 items-center w-full">
+
+          <div>
+
+            <h1 className="text-7xl md:text-8xl font-black mb-6 gradient-text">
+              TECHALFA
+            </h1>
+
+            <h2 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+              Beyond Learning,
+              <br />
+              Beyond Limits
+            </h2>
+
+            <p className="text-xl text-gray-300 max-w-xl">
+              A student-driven technology and innovation community empowering
+              future developers, designers, innovators and leaders.
+            </p>
+
+            <div className="flex gap-5 mt-10 flex-wrap">
+
+  <Link
+    href="/contact"
+    className="px-8 py-4 rounded-xl bg-purple-600 hover:bg-purple-700 transition"
+  >
+    Join Community
+  </Link>
+
+  <Link
+    href="/events"
+    className="px-8 py-4 rounded-xl border border-cyan-400 hover:bg-cyan-400 hover:text-black transition"
+  >
+    Explore Events
+  </Link>
+
+</div>
+
+          </div>
+
+          <div className="relative flex justify-center">
+
+            <div className="absolute w-[450px] h-[450px] bg-purple-600/20 rounded-full blur-[120px]"></div>
+
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/logo.png"
+              alt="Techalfa"
+              width={350}
+              height={350}
+              className="relative z-10"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+          </div>
+
         </div>
-      </main>
-    </div>
+
+      </section>
+
+      {/* STATS */}
+
+      <section className="max-w-7xl mx-auto px-6 py-20">
+
+        <div className="grid md:grid-cols-4 gap-6">
+
+          <div className="glass rounded-3xl p-8 text-center">
+            <h3 className="text-5xl font-bold text-cyan-400">500+</h3>
+            <p className="text-gray-400 mt-3">Members</p>
+          </div>
+
+          <div className="glass rounded-3xl p-8 text-center">
+            <h3 className="text-5xl font-bold text-purple-400">25+</h3>
+            <p className="text-gray-400 mt-3">Workshops</p>
+          </div>
+
+          <div className="glass rounded-3xl p-8 text-center">
+            <h3 className="text-5xl font-bold text-pink-400">10+</h3>
+            <p className="text-gray-400 mt-3">Collaborations</p>
+          </div>
+
+          <div className="glass rounded-3xl p-8 text-center">
+            <h3 className="text-5xl font-bold text-cyan-400">50+</h3>
+            <p className="text-gray-400 mt-3">Events</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ABOUT */}
+
+      <section className="max-w-5xl mx-auto px-6 py-28 text-center">
+
+        <h2 className="text-5xl font-bold mb-10">
+          About Techalfa
+        </h2>
+
+        <p className="text-xl text-gray-300 leading-10">
+          Techalfa is a student-led technology and innovation community focused
+          on empowering learners through workshops, hackathons, competitions,
+          networking opportunities and industry collaborations.
+        </p>
+
+      </section>
+
+      {/* EVENTS */}
+
+      <section className="max-w-7xl mx-auto px-6 py-28">
+
+        <h2 className="text-5xl font-bold text-center mb-16">
+          Upcoming Events
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          <div className="glass rounded-3xl p-8">
+            <h3 className="text-2xl font-bold mb-3">
+              AI & ML Workshop
+            </h3>
+
+            <p className="text-gray-400">
+              Learn Artificial Intelligence and Machine Learning.
+            </p>
+
+            <Link
+  href="/contact"
+  className="inline-block mt-6 bg-purple-600 px-5 py-2 rounded-xl hover:bg-purple-700 transition"
+>
+  Register
+</Link>
+          </div>
+
+          <div className="glass rounded-3xl p-8">
+            <h3 className="text-2xl font-bold mb-3">
+              Web Development Bootcamp
+            </h3>
+
+            <p className="text-gray-400">
+              Build modern web applications.
+            </p>
+<Link
+  href="/contact"
+  className="inline-block mt-6 bg-cyan-500 text-black px-5 py-2 rounded-xl hover:scale-105 transition"
+>
+  Register
+</Link>
+          </div>
+
+          <div className="glass rounded-3xl p-8">
+            <h3 className="text-2xl font-bold mb-3">
+              Hackathon 2026
+            </h3>
+
+            <p className="text-gray-400">
+              Solve real-world challenges and win prizes.
+            </p>
+
+            <Link
+  href="/contact"
+  className="inline-block mt-6 bg-pink-500 px-5 py-2 rounded-xl hover:scale-105 transition"
+>
+  Register
+</Link>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* LEADERSHIP */}
+
+      <section className="max-w-7xl mx-auto px-6 py-28">
+
+        <h2 className="text-5xl font-bold text-center mb-16">
+          Leadership Team
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-10">
+
+          <div className="glass rounded-3xl p-10 text-center">
+
+            <Image
+              src="/team/rajeev.jpg"
+              alt="Rajeev Tiwari"
+              width={140}
+              height={140}
+              className="rounded-full object-cover mx-auto mb-6 border-4 border-cyan-400"
+            />
+
+            <h3 className="text-3xl font-bold">
+              Rajeev Tiwari
+            </h3>
+
+            <p className="text-cyan-400 mt-2">
+              President
+            </p>
+
+          </div>
+
+          <div className="glass rounded-3xl p-10 text-center">
+
+            <Image
+              src="/team/sakshi.jpg"
+              alt="Sakshi Rakhade"
+              width={140}
+              height={140}
+              className="rounded-full object-cover mx-auto mb-6 border-4 border-pink-400"
+            />
+
+            <h3 className="text-3xl font-bold">
+              Sakshi Rakhade
+            </h3>
+
+            <p className="text-pink-400 mt-2">
+              Vice President
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* COLLABORATIONS */}
+
+      <section className="max-w-7xl mx-auto px-6 py-28">
+
+        <h2 className="text-5xl font-bold text-center mb-16">
+          Collaborations
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+
+          {[
+            "Widesoftech Pvt Ltd",
+            "Priyadarshini College of Engineering",
+            "Nagpur Institute of Technology",
+            "Data Council Nagpur",
+            "Vision Computer",
+            "Intermeet"
+          ].map((item) => (
+            <div
+              key={item}
+              className="glass rounded-2xl p-8 text-center"
+            >
+              {item}
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* CTA */}
+
+      <section className="max-w-5xl mx-auto px-6 py-28 text-center">
+
+        <h2 className="text-5xl font-bold mb-6">
+          Join The Community
+        </h2>
+
+        <p className="text-xl text-gray-400 mb-10">
+          Learn, build, network and grow with Techalfa.
+        </p>
+
+        <button className="px-10 py-4 rounded-xl bg-purple-600 hover:bg-purple-700">
+          Join Now
+        </button>
+
+      </section>
+
+      {/* FOOTER */}
+
+      <footer className="border-t border-white/10">
+
+        <div className="max-w-7xl mx-auto px-6 py-12 text-center">
+
+          <h3 className="text-3xl font-bold gradient-text">
+            TECHALFA
+          </h3>
+
+          <p className="text-gray-400 mt-4">
+            Beyond Learning • Beyond Limits
+          </p>
+
+          <p className="text-gray-500 mt-6 text-sm">
+            © 2026 Techalfa. All Rights Reserved.
+          </p>
+
+        </div>
+
+      </footer>
+
+    </main>
   );
 }
